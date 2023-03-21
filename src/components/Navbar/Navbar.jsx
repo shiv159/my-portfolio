@@ -16,7 +16,7 @@ function Navbar() {
 
   async function downloadResume(){
 
-      const Blobresponse=await fetch(resume).then((response)=>{
+const Blobresponse=await fetch(resume).then((response)=>{
 
       return response.blob();
     });

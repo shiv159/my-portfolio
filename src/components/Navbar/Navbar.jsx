@@ -28,14 +28,6 @@ function Navbar() {
     });
     
     saveAs(Blobresponse,'Shivam_Upadhayay_Resume.pdf');
-<<<<<<< Updated upstream
-  
-=======
-<<<<<<< HEAD
-=======
-  
->>>>>>> b56282b37caecf2411b70b5edb0716ad040e6920
->>>>>>> Stashed changes
     
   }
 

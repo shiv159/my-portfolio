@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link,useLocation } from 'react-router-dom';
 import './module.css';
 import {List} from 'react-bootstrap-icons'
-import { resumeLink } from '../../helper/Socials';
-import { saveAs } from 'file-saver'
+import { saveAs } from 'file-saver';
+import resume from "../../assets/Shivam_Upadhayay_Resume.pdf"
 
 
 function Navbar() {
@@ -15,12 +15,27 @@ function Navbar() {
   }, [location])
 
   async function downloadResume(){
+<<<<<<< Updated upstream
       const Blobresponse=await fetch(resumeLink).then((response)=>{
+=======
+<<<<<<< HEAD
+    const Blobresponse=await fetch(resume).then((response)=>{
+=======
+      const Blobresponse=await fetch(resumeLink).then((response)=>{
+>>>>>>> b56282b37caecf2411b70b5edb0716ad040e6920
+>>>>>>> Stashed changes
       return response.blob();
     });
     
     saveAs(Blobresponse,'Shivam_Upadhayay_Resume.pdf');
+<<<<<<< Updated upstream
   
+=======
+<<<<<<< HEAD
+=======
+  
+>>>>>>> b56282b37caecf2411b70b5edb0716ad040e6920
+>>>>>>> Stashed changes
     
   }
 

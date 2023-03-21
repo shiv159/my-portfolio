@@ -16,7 +16,7 @@ function Navbar() {
 
   async function downloadResume(){
     console.log("cliked");
-    const Blobresponse=await fetch(resumeLink,{mode:'no-cors'}).then((response)=>{
+    const Blobresponse=await fetch(resumeLink).then((response)=>{
       return response.blob();
     });
     

@@ -15,13 +15,12 @@ function Navbar() {
   }, [location])
 
   async function downloadResume(){
-    console.log("cliked");
-    const Blobresponse=await fetch(resumeLink).then((response)=>{
+      const Blobresponse=await fetch(resumeLink).then((response)=>{
       return response.blob();
     });
     
     saveAs(Blobresponse,'Shivam_Upadhayay_Resume.pdf');
-    console.log("cliked");
+  
     
   }
 

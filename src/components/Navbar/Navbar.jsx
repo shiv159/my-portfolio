@@ -3,20 +3,28 @@ import { Link,useLocation } from 'react-router-dom';
 import './module.css';
 import {List} from 'react-bootstrap-icons'
 import { resumeLink } from '../../helper/Socials';
+import { saveAs } from 'file-saver'
+
 
 function Navbar() {
   const [expandNavbar ,setExpandNavbar] =useState(false);
   const location =useLocation();
+  
   useEffect(() => {
     setExpandNavbar(false);
   }, [location])
 
-  function downloadResume(){
-    const link=document.createElement('a');
-    link.href=resumeLink;
-    link.download='Shivam_Upadhayay_Resume.pdf';
-    link.click();
+  async function downloadResume(){
+    console.log("cliked");
+    const Blobresponse=await fetch(resumeLink,{mode:'no-cors'}).then((response)=>{
+      return response.blob();
+    });
+    
+    saveAs(Blobresponse,'Shivam_Upadhayay_Resume.pdf');
+    console.log("cliked");
+    
   }
+
   return (
     <div className='navbar' id={expandNavbar?"open":"close"}>
         <div className='toggleButton'>
@@ -32,7 +40,7 @@ function Navbar() {
           <Link to="/experience">Experience</Link>
           <Link
           onClick={downloadResume}
-          target="_blank" >Resume</Link>
+           >Resume</Link>
         </div>
     </div>
   )

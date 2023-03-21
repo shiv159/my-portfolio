@@ -15,15 +15,9 @@ function Navbar() {
   }, [location])
 
   async function downloadResume(){
-<<<<<<< Updated upstream
-      const Blobresponse=await fetch(resumeLink).then((response)=>{
-=======
-<<<<<<< HEAD
-    const Blobresponse=await fetch(resume).then((response)=>{
-=======
-      const Blobresponse=await fetch(resumeLink).then((response)=>{
->>>>>>> b56282b37caecf2411b70b5edb0716ad040e6920
->>>>>>> Stashed changes
+
+      const Blobresponse=await fetch(resume).then((response)=>{
+
       return response.blob();
     });
     

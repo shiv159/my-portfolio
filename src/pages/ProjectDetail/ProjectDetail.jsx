@@ -18,8 +18,8 @@ function ProjectDetail() {
   return (
     <div className='project'>
     <h1>{project.name}</h1>
-    <img src={project.image} alt="project "></img>
-    <p><b>Skills Used :</b>{project.skills}</p>
+    <img src={project.image} alt="project" ></img>
+    <p><b>Skills Used: </b>{project.skills}</p>
     <Link to={project.githubLink}><Github></Github></Link>
 
     </div>

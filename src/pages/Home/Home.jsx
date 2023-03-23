@@ -36,11 +36,11 @@ function Home() {
           </li>
           <li className='item'>
             <h2>Back-End</h2>
-            <span>Spring Boot, Hibernate, Microserices, RestAPIs</span>
+            <span>Spring Boot, Hibernate,MySQL,Microserices, RestAPIs</span>
           </li>
           <li className='item'>
             <h2>Languages</h2>
-            <span>Java</span>
+            <span>Java,JavaScript</span>
           </li>
 
         </ol>
